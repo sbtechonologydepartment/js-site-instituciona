@@ -21,4 +21,8 @@ export const GlobalStyles = createGlobalStyle<IPropsTheme>`
         text-decoration: none;
         cursor: pointer;
     }
+
+    button {
+        cursor: pointer;
+    }
 `
