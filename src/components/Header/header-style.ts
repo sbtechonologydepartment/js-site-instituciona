@@ -3,7 +3,7 @@ import { IPropsTheme } from "../../styles/theme";
 
 export const Container = styled.div<IPropsTheme>`
     width: 100%;
-    height: 9rem;
+    height: 8.5rem;
     padding: 4rem 8rem;
 
     border-radius: 0 0 8rem 8rem;

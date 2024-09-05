@@ -2,6 +2,7 @@ import { Button } from "../../components/Button"
 import { Floating_text } from "../../components/Floating-text"
 import { Header } from "../../components/Header"
 import { Container } from "./Home-style"
+import { FaArrowRight } from "react-icons/fa";
 
 export function Home() {
 
@@ -12,7 +13,10 @@ export function Home() {
       <Floating_text />
 
       <div id="home-button">
-        <Button text="Saiba mais"/>
+        <Button 
+         text="Saiba mais"
+         icon={FaArrowRight}
+        />
       </div>
     </Container>
   )
