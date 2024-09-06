@@ -3,17 +3,18 @@ import { Container } from "./box-style";
 interface IPropsBox {
     tittle: string
     text: string
-    icon?: JSX.ElementType
+    Icon?: JSX.ElementType
+    [key: string]: unknown
 }
 
-export function Box(props: IPropsBox) {
+export function Box({text, Icon, tittle, ...rest}: IPropsBox) {
     return(
-        <Container>
-            <strong>{props.tittle}</strong>
+        <Container {...rest}>
+            <strong>{tittle}</strong>
 
-            <p>{props.text}</p>
+            <p>{text}</p>
 
-            {props.icon && <props.icon />}
+            {Icon && <Icon />}
         </Container>
     )
 }
