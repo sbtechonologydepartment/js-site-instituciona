@@ -1,6 +1,7 @@
 import { Container } from "./header-style";
 import black_logo from '../../assets/black-logo.png'
 import { FaInstagram, FaWhatsapp, FaLinkedin, FaFacebook  } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export function Header() {
     return(
@@ -11,16 +12,16 @@ export function Header() {
 
             <div id="navigation">
                 <div className="link-nav">
-                    <a href="#">Home</a>
+                    <Link to={'/home'}>Home</Link>
                 </div>
                 <div className="link-nav">
-                    <a href="#">Sobre nós</a>
+                    <Link to={'/home'}>Sobre nós</Link>
                 </div>
                 <div className="link-nav">
-                    <a href="#">Orçamento</a>
+                    <Link to={'/home'}>Orçamento</Link>
                 </div>
                 <div className="link-nav">
-                    <a href="#">Parceiros</a>
+                    <Link to={'/home'}>Parceiros</Link>
                 </div>
             </div>
 

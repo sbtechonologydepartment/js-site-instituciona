@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button"
+import { Button_link } from "../../components/Button-link"
 import { Floating_text } from "../../components/Floating-text"
 import { Header } from "../../components/Header"
 import { Container } from "./Start-style"
@@ -13,7 +13,8 @@ export function Start() {
       <Floating_text />
 
       <div id="home-button">
-        <Button 
+        <Button_link 
+         to="/home"
          text="Saiba mais"
          icon={FaArrowRight}
         />
