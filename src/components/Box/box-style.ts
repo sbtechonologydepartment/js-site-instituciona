@@ -13,23 +13,45 @@ export const Container = styled.div<IPropsTheme>`
 
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     gap: 2rem;
     align-items: center;
 
-    > strong {
-        font-size: 1.7rem;
-        color: ${(props) => props.theme.COLORS.DARK_BLUE};
+    > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        align-items: center;
+
+        > strong {
+            height: fit-content;
+            width: fit-content;
+
+            font-size: 1.7rem;
+            color: ${(props) => props.theme.COLORS.DARK_BLUE};
+        }
+    
+        > p:nth-child(2),
+        > ul:nth-child(2)
+        {
+            height: 13.8rem;
+
+            font-size: 1.4rem;
+            text-align: justify;
+    
+            > li {
+                list-style: none;
+            }
+            > li:nth-child(odd) {
+                margin-block: .3rem;
+            }
+        }
     }
 
-    > p:nth-child(2) {
-        font-size: 1.3rem;
-        text-align: justify;
-
-        margin-bottom: 4rem;
-    }
 
     > :last-child {
         font-size: 8rem;
+        height: 8rem;
         color: ${(props) => props.theme.COLORS.ORANGE_MAIN};
     }
 `

@@ -2,7 +2,7 @@ import { Container } from "./box-style";
 
 interface IPropsBox {
     tittle: string
-    text: string
+    text: string | string[]
     Icon?: JSX.ElementType
     [key: string]: unknown
 }
@@ -10,9 +10,24 @@ interface IPropsBox {
 export function Box({text, Icon, tittle, ...rest}: IPropsBox) {
     return(
         <Container {...rest}>
-            <strong>{tittle}</strong>
+            <div>
+                <strong>{tittle}</strong>
 
-            <p>{text}</p>
+                {
+                    Array.isArray(text) ?
+                    <ul>
+                        {
+                            text.map((item, index) => (
+                                <li key={index}>
+                                    {item}
+                                </li>
+                            ))
+                        }
+                    </ul>
+                    :
+                    <p>{text}</p>
+                }
+            </div>
 
             {Icon && <Icon />}
         </Container>

@@ -14,7 +14,7 @@ export const Container = styled.div`
         justify-content: space-around;
 
         > div {
-            animation: deckOfCards 1s ease-in-out backwards;
+            animation: deckOfCards 850ms ease-in-out backwards;
 
             animation-delay: var(--animation-cards-delay);
             --animation-cards-delay: 0s;

@@ -1,9 +1,9 @@
 import { Header } from "../../components/Header";
 import { Container } from "./home-style";
 import { Box } from "../../components/Box";
-import { IoTimer, } from "react-icons/io5";
-import { IoMdListBox } from "react-icons/io";
-import { FaLightbulb } from "react-icons/fa6";
+import { TbTargetArrow } from "react-icons/tb";
+import { LiaEyeSolid } from "react-icons/lia";
+import { FaHandHoldingHeart } from "react-icons/fa";
 
 export function Home() {
     return (
@@ -12,25 +12,25 @@ export function Home() {
 
             <div id="box-row">
                 <Box
-                 tittle='Tempo'
-                 Icon={IoTimer}
-                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit cumque ab quae ratione est ipsum rerum accusantium, consectetur nostrum aliquam iste nesciunt magni omnis? Doloribus tenetur ducimus vitae saepe? "
+                 tittle='Missão'
+                 Icon={TbTargetArrow}
+                 text="Impactar positivamente na vida dos colaboradores e cliente atráves do elo com os parceiros promovendo o crescimento de todos"
                 />
                 <Box
                  style={{
-                    '--animation-cards-delay': '1s'
+                    '--animation-cards-delay': '850ms'
                  }}
-                 tittle='Receita'
-                 Icon={IoMdListBox}
-                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit cumque ab quae ratione est ipsum rerum accusantium, consectetur nostrum aliquam iste nesciunt magni omnis? Doloribus tenetur ducimus vitae saepe?"
+                 tittle='Visão'
+                 Icon={LiaEyeSolid}
+                 text="Expandir a operação com mais filiais no nordeste formando novos representantes comerciais que possam implantar novas soluções como micro negócios em nossos clientes visando o aumento do faturamento"
                 />
                 <Box
-                 tittle='Inovação'
+                 tittle='Valores'
                  style={{
-                    '--animation-cards-delay': '2s'
+                    '--animation-cards-delay': '1700ms'
                  }}
-                 Icon={FaLightbulb}
-                 text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sit cumque ab quae ratione est ipsum rerum accusantium, consectetur nostrum aliquam iste nesciunt magni omnis? Doloribus tenetur ducimus vitae saepe?"
+                 Icon={FaHandHoldingHeart}
+                 text={["inovação", "confiança", "melhoria", "contínua", "eficiência"]}
                 />
             </div>
         </Container>

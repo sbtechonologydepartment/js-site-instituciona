@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 import { IPropsTheme } from "./theme";
 
 export const GlobalStyles = createGlobalStyle<IPropsTheme>`
+    html {
+        scroll-behavior: smooth;
+    }
+
     * {
         padding: 0;
         margin: 0;
