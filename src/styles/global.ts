@@ -19,6 +19,7 @@ export const GlobalStyles = createGlobalStyle<IPropsTheme>`
 
     body {
         background-color: ${(props) => props.theme.COLORS.GRAY};
+        overflow-x: hidden;
     }
 
     a {

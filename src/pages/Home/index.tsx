@@ -4,6 +4,7 @@ import { Box } from "../../components/Box";
 import { TbTargetArrow } from "react-icons/tb";
 import { LiaEyeSolid } from "react-icons/lia";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { CarouselRunner } from "../../components/Carousel-runner";
 
 export function Home() {
     return (
@@ -33,6 +34,8 @@ export function Home() {
                  text={["inovação", "confiança", "melhoria", "contínua", "eficiência"]}
                 />
             </div>
+
+            <CarouselRunner />
         </Container>
     )
 }
