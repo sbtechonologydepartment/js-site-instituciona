@@ -49,7 +49,7 @@ export const Container = styled.div<IProps>`
 
         display: flex;
         flex-direction: row;
-        gap: 5rem;
+        gap: 4rem;
         align-items: center;
 
         white-space: nowrap;
@@ -65,7 +65,7 @@ export const Container = styled.div<IProps>`
             width: fit-content;
             white-space: nowrap;
 
-            --t: 65s;
+            --t: 60s;
             animation: slide var(--t) infinite linear both;
             animation-delay: calc(var(--t) * -1);
             animation-play-state: paused;
