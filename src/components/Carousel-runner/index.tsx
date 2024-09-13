@@ -13,19 +13,19 @@ import logo9 from '../../assets/Fábricas parceiras - JS/9.png'
 import logo10 from '../../assets/Fábricas parceiras - JS/10.png'
 
 export function CarouselRunner() {
-    const {ref, inView} = useInView()
+    const {ref: carouselRunnerRef, inView: carouselRunnerInView} = useInView()
     const [visibleCount, setVisibleCount] = useState<number>(0)
 
     useEffect(() => {
-        if(inView) {
+        if(carouselRunnerInView) {
             setVisibleCount((prevState) => prevState + 1)
         }
-    }, [inView])
+    }, [carouselRunnerInView])
     
     return(
         <Container 
-         inview={visibleCount === 1 ? 'true' : 'false'}
-         ref={ref}
+         $carouselRunnerInView={visibleCount === 1 ? 'true' : 'false'}
+         ref={carouselRunnerRef}
         >
             <strong>Empresas parceiras</strong>
 

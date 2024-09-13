@@ -22,6 +22,12 @@ export const Container = styled.div`
         }
     }
 
+    > div:nth-child(4) {
+        height: 50rem;
+        width: 100%;
+        padding: 6rem 10rem;
+    }
+
     @keyframes deckOfCards {
         0% {
             opacity: 0;

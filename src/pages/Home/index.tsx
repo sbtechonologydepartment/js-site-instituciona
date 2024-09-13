@@ -5,6 +5,7 @@ import { TbTargetArrow } from "react-icons/tb";
 import { LiaEyeSolid } from "react-icons/lia";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { CarouselRunner } from "../../components/Carousel-runner";
+import { TextPresentation } from "../../components/text-presentation";
 
 export function Home() {
     return (
@@ -36,6 +37,14 @@ export function Home() {
             </div>
 
             <CarouselRunner />
+
+            <div>
+                <TextPresentation>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae leo eget velit pharetra convallis. Fusce vehicula, turpis ut placerat scelerisque, risus libero vestibulum massa, nec luctus justo risus eget lacus.
+                    </p>
+                </TextPresentation>
+            </div>
         </Container>
     )
 }

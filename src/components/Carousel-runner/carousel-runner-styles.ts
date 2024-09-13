@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
 interface IProps extends IPropsTheme {
-    inview?: string
+    $carouselRunnerInView?: string
 }
 
 export const Container = styled.div<IProps>`
@@ -22,8 +22,8 @@ export const Container = styled.div<IProps>`
         text-align: center;
         color: ${(props) => props.theme.COLORS.GRAY};
 
-        ${({inview}) => {
-            if(inview === 'true') {
+        ${({$carouselRunnerInView}) => {
+            if($carouselRunnerInView === 'true') {
                 return `
                 animation: emerge 700ms ease-in-out 1005ms backwards;
                 `
@@ -31,8 +31,8 @@ export const Container = styled.div<IProps>`
         }}
     }
 
-    ${({inview}) => {
-        if(inview === 'true') {
+    ${({$carouselRunnerInView}) => {
+        if($carouselRunnerInView === 'true') {
             return `
             width: .1%;
             animation: roll 1s ease-in-out forwards;
@@ -65,18 +65,11 @@ export const Container = styled.div<IProps>`
             width: fit-content;
             white-space: nowrap;
 
-            --t: 60s;
-            animation: slide var(--t) infinite linear both;
-            animation-delay: calc(var(--t) * -1);
+            animation: scroll 30s linear infinite both;
             animation-play-state: paused;
 
-            &:nth-child(2) {
-                animation: slide2 var(--t) infinite linear both;
-                animation-delay: calc(var(--t) / -2);
-            }
-
-            ${({inview}) => {
-                if(inview === 'true') {
+            ${({$carouselRunnerInView}) => {
+                if($carouselRunnerInView === 'true') {
                     return `
                     animation-play-state: running;
                     `
@@ -107,7 +100,7 @@ export const Container = styled.div<IProps>`
         }
 
         &::after {
-            right: 0;
+            right: -1px;
             transform: rotateZ(180deg);
         }
 
@@ -135,23 +128,13 @@ export const Container = styled.div<IProps>`
         }
     }
 
-    @keyframes slide {
-        0% {
-            transform: translateX(100%);
+    @keyframes scroll {
+        from {
+            transform: translateX(0%);
         }
 
-        100% {
+        to {
             transform: translateX(-100%);
-        }
-    }
-
-    @keyframes slide2 {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-200%);
         }
     }
 `
