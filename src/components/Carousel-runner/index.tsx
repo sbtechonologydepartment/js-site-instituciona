@@ -14,17 +14,17 @@ import logo10 from '../../assets/Fábricas parceiras - JS/10.png'
 
 export function CarouselRunner() {
     const {ref: carouselRunnerRef, inView: carouselRunnerInView} = useInView()
-    const [visibleCount, setVisibleCount] = useState<number>(0)
+    const [alreadySeen, setAlreadySeen] = useState<boolean>(false)
 
     useEffect(() => {
-        if(carouselRunnerInView) {
-            setVisibleCount((prevState) => prevState + 1)
+        if(carouselRunnerInView && !alreadySeen) {
+            setAlreadySeen(true)
         }
-    }, [carouselRunnerInView])
+    }, [carouselRunnerInView, alreadySeen])
     
     return(
         <Container 
-         $carouselRunnerInView={visibleCount === 1 ? 'true' : 'false'}
+         $carouselRunnerInView={alreadySeen ? 'true' : 'false'}
          ref={carouselRunnerRef}
         >
             <strong>Empresas parceiras</strong>

@@ -5,22 +5,24 @@ import { ReactNode, useEffect, useState } from "react";
 interface IProps {
     [key: string]: unknown
     children?: ReactNode
+    leftOrRight: 'right' | 'left'
 }
 
 export function TextPresentation(props:IProps) {
     const {ref: textPresentationRef, inView: textPresentationInView} = useInView()
-    const [visibleCount, setVisibleCount] = useState<number>(0)
+    const [alreadySeen, setAlreadyseen] = useState<boolean>(false)
 
     useEffect(() => {
-        if(textPresentationInView) {
-            setVisibleCount((prevState) => prevState + 1)
+        if(textPresentationInView && !alreadySeen) {
+            setAlreadyseen(true)
         }
-    }, [textPresentationInView])
+    }, [textPresentationInView, alreadySeen])
 
     return (
         <Container 
          ref={textPresentationRef}
-         $textPresentationInView={visibleCount === 1 ? 'true' : 'false'}
+         $textPresentationInView={alreadySeen ? 'true' : 'false'}
+         direction={props.leftOrRight}
          {...props}
         >   
             {props.children}

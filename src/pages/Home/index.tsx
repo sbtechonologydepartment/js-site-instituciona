@@ -39,12 +39,42 @@ export function Home() {
             <CarouselRunner />
 
             <div>
-                <TextPresentation>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae leo eget velit pharetra convallis. Fusce vehicula, turpis ut placerat scelerisque, risus libero vestibulum massa, nec luctus justo risus eget lacus.
-                    </p>
-                </TextPresentation>
+                <div className="textRow">
+                    <TextPresentation leftOrRight="left">
+                        <strong>Com o <span>produto</span> certo grandes coisas acontecem</strong>
+                    </TextPresentation>
+
+                    <TextPresentation leftOrRight="right">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae leo eget velit pharetra convallis. Fusce vehicula, turpis ut placerat scelerisque, risus libero vestibulum massa, nec luctus justo risus eget lacus. Fusce vehicula, turpis ut placerat scelerisque, risus.
+                        </p>
+                    </TextPresentation>
+                </div>
+                <div className="textRow">
+                    <TextPresentation leftOrRight="left">
+                        <strong>redução do <span>tempo</span> e aumento da produtividade</strong>
+                    </TextPresentation>
+
+                    <TextPresentation leftOrRight="right">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae leo eget velit pharetra convallis. Fusce vehicula, turpis ut placerat scelerisque, risus libero vestibulum massa, nec luctus justo risus eget lacus. Fusce vehicula, turpis ut placerat scelerisque, risus.
+                        </p>
+                    </TextPresentation>
+                </div>
+                <div className="textRow">
+                    <TextPresentation leftOrRight="left">
+                        <strong>receita para alcançar o <span>sucesso</span></strong>
+                    </TextPresentation>
+
+                    <TextPresentation leftOrRight="right">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae leo eget velit pharetra convallis. Fusce vehicula, turpis ut placerat scelerisque, risus libero vestibulum massa, nec luctus justo risus eget lacus. Fusce vehicula, turpis ut placerat scelerisque, risus.
+                        </p>
+                    </TextPresentation>
+                </div>
             </div>
+
+            <div></div>
         </Container>
     )
 }

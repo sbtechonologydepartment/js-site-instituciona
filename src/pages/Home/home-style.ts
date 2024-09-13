@@ -1,12 +1,15 @@
 import styled from "styled-components";
+import { IPropsTheme } from "../../styles/theme";
 
-export const Container = styled.div`
+export const Container = styled.div<IPropsTheme>`
     display: flex;
     flex-direction: column;
     gap: 13rem;
 
     div#box-row {
         width: 80%;
+
+        margin-bottom: 10rem;
 
         align-self: center;
         display: flex;
@@ -23,9 +26,28 @@ export const Container = styled.div`
     }
 
     > div:nth-child(4) {
-        height: 50rem;
+
+        div.textRow {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+            align-items: center;
+            justify-content: start;
+        }
+
+        height: fit-content;
         width: 100%;
-        padding: 6rem 10rem;
+        padding: 3rem 14% 0rem 13%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10.5rem;
+        align-items: center;
+        justify-content: start;
+    }
+
+    > div:last-child {
+        height: 50rem;
     }
 
     @keyframes deckOfCards {
