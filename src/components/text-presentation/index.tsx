@@ -5,7 +5,7 @@ import { ReactNode, useEffect, useState } from "react";
 interface IProps {
     [key: string]: unknown
     children?: ReactNode
-    leftOrRight: 'right' | 'left'
+    $leftright: 'right' | 'left'
 }
 
 export function TextPresentation(props:IProps) {
@@ -22,7 +22,7 @@ export function TextPresentation(props:IProps) {
         <Container 
          ref={textPresentationRef}
          $textPresentationInView={alreadySeen ? 'true' : 'false'}
-         direction={props.leftOrRight}
+         direction={props.$leftright}
          {...props}
         >   
             {props.children}

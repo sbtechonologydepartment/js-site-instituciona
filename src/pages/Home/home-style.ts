@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 
-export const Container = styled.div<IPropsTheme>`
+interface IProps extends IPropsTheme {
+    divalreadyvisible?: 'true' | 'false'
+}
+
+export const Container = styled.div<IProps>`
     display: flex;
     flex-direction: column;
     gap: 13rem;
@@ -46,8 +50,45 @@ export const Container = styled.div<IPropsTheme>`
         justify-content: start;
     }
 
-    > div:last-child {
-        height: 50rem;
+    > div#solutions {
+        height: fit-content;
+        width: 100%;
+        padding: 8% 10% 0%;
+
+        background-color: ${(props) => props.theme.COLORS.DARK_BLUE};
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9rem;
+
+        > div:first-child {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+            align-items: center;
+
+            width: 68%;
+
+            strong {
+                font-size: 4rem;
+                color: ${(props) => props.theme.COLORS.GRAY};
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.8rem;
+                color: ${(props) => props.theme.COLORS.STRONG_GRAY};
+                text-align: center;
+            }
+        }
+
+        > div:last-child {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 10rem;
+        }
     }
 
     @keyframes deckOfCards {

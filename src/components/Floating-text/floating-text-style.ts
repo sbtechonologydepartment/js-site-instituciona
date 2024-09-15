@@ -20,7 +20,7 @@ export const Container = styled.div<IPropsTheme>`
             animation: arriving 5s ease-in-out normal;
             animation-delay: var(--animation-delay);
             --float-distance: -10px;
-            --animation-delay: 0s
+            --animation-delay: 0s;
         }
     }
 
