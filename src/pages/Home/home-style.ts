@@ -91,7 +91,7 @@ export const Container = styled.div<IProps>`
         }
     }
 
-    > div:last-child {
+    > div#work-together {
         width: 100%;
         padding: 0% 20%;
         height: 37rem;
@@ -113,6 +113,7 @@ export const Container = styled.div<IProps>`
             strong {
                 font-size: 3rem;
                 color: ${(props) => props.theme.COLORS.ORANGE_MAIN};
+                letter-spacing: 1px;
             }
 
             p {

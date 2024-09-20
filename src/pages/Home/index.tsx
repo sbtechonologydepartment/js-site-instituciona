@@ -11,6 +11,7 @@ import { MdOutlineHighQuality, MdFactory, MdComputer } from "react-icons/md";
 import { FaArrowTrendUp} from "react-icons/fa6";
 import { IoIosInfinite, IoIosHourglass } from "react-icons/io";
 import { Button_link } from "../../components/Button-link";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
 
@@ -149,6 +150,8 @@ export function Home() {
                 </div>
 
             </div>
+
+            <Footer />
         </Container>
     )
 }
