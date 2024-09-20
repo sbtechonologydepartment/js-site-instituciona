@@ -16,7 +16,8 @@ export function Start() {
         <Button_link 
          to="/home"
          text="Saiba mais"
-         icon={FaArrowRight}
+         Icon={FaArrowRight}
+         timeDealyAnimation="3.7s"
         />
       </div>
     </Container>

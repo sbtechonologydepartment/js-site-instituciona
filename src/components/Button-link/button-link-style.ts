@@ -7,7 +7,7 @@ export const Container = styled(Link)<IPropsTheme>`
 
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 10%;
 
     background-color: ${(props) => props.theme.COLORS.STRONG_GRAY};
 
@@ -19,8 +19,8 @@ export const Container = styled(Link)<IPropsTheme>`
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    
-    animation: appear 1s ease-in-out 4s backwards;
+
+    animation: appear 1s ease-in-out var(--button-animation-delay) backwards;
     
     > span,
     :last-child {
