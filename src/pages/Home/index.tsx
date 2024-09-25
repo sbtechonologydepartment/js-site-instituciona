@@ -144,7 +144,7 @@ export function Home() {
                 <div>
                     <Button_link
                      text="Comece agora"
-                     to="/contact"
+                     to="/contacts"
                      timeDealyAnimation="0s"
                     />
                 </div>

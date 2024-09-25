@@ -18,7 +18,7 @@ export function Header() {
                     <Link to={'/home'}>Sobre nós</Link>
                 </div>
                 <div className="link-nav">
-                    <Link to={'/home'}>Orçamento</Link>
+                    <Link to={'/contacts'}>Orçamento</Link>
                 </div>
                 <div className="link-nav">
                     <Link to={'/home'}>Parceiros</Link>
