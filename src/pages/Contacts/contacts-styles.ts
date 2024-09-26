@@ -7,9 +7,9 @@ export const Container = styled.div<IPropsTheme>`
     align-items: center;
     gap: 13rem;
 
-    > div:last-child {
+    > div:nth-child(2) {
         width: 75%;
-        height: 100vh;
+        height: 80vh;
 
         display: flex;
         flex-direction: row;
@@ -75,7 +75,7 @@ export const Form = styled.form`
     }
 `
 
-export const Button = styled.a`
+export const Button = styled.button`
     position: relative;
 
     align-self: flex-end;

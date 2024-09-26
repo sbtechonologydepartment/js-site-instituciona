@@ -12,6 +12,11 @@ export const GlobalStyles = createGlobalStyle<IPropsTheme>`
         box-sizing: border-box;
     }
 
+    [data-sonner-toast] {
+        min-height: 50px; /* Ajuste a altura mínima conforme necessário */
+        padding: 16px; /* Ajuste o padding */
+    }
+
     :root {
         font-size: 62.5%;
         font-family: "Sora", sans-serif;
