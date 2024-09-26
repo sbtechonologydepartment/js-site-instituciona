@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input";
 import { Textarea } from "../../components/Textarea";
@@ -7,6 +7,7 @@ import { FiMapPin, FiPhone  } from "react-icons/fi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { toast } from "sonner";
 import { Footer } from "../../components/Footer";
+import { smoothScrollTo } from "../../utils/smoothScrollTo";
 
 export function Contacts() {
     const [name, setName] = useState<string>('')
@@ -23,6 +24,10 @@ export function Contacts() {
 
         window.open('https://www.instagram.com', '_blank')
     }
+
+    useEffect(() => {
+        smoothScrollTo(0, 0, 500)
+    })
 
     return (
         <Container>
