@@ -22,7 +22,10 @@ export function Contacts() {
             return toast.error('Preencha todos os campos!', {duration: 5000})
         }
 
-        window.open('https://www.instagram.com', '_blank')
+        const whatsappText = `Nome: ${name}\nEmail: ${email}\nEmpresa: ${enterprise}\nMensagem: ${menssage}
+        `
+
+        window.open(`https://wa.me/5571996399919?text=${encodeURIComponent(whatsappText)}`, '_blank')
     }
 
     useEffect(() => {
@@ -70,6 +73,7 @@ export function Contacts() {
                         />
                         <Input 
                          placeholder='Email'
+                         type='email'
                          onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                         />
                         <Input 
