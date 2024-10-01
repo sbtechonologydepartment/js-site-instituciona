@@ -15,13 +15,13 @@ export function Header() {
                     <Link to={'/home'}>Home</Link>
                 </div>
                 <div className="link-nav">
-                    <Link to={'/home'}>Sobre nós</Link>
+                    <Link to={'/aboutUs'}>Sobre nós</Link>
                 </div>
                 <div className="link-nav">
                     <Link to={'/contacts'}>Orçamento</Link>
                 </div>
                 <div className="link-nav">
-                    <Link to={'/home'}>Parceiros</Link>
+                    <Link to={'/partners'}>Parceiros</Link>
                 </div>
             </div>
 

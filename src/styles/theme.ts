@@ -1,6 +1,7 @@
 interface IColors {
     ORANGE_MAIN: string
     DARK_BLUE: string
+    LIGHT_BLUE: string
     WHITE: string
     GRAY: string
     STRONG_GRAY: string
@@ -19,6 +20,7 @@ export const Theme: ITheme = {
         ORANGE_MAIN: '#F75800',
 
         DARK_BLUE: '#0A1B23',
+        LIGHT_BLUE: '#153D50',
 
         WHITE: '#FFFFFF',
         GRAY: '#F4F4F4',

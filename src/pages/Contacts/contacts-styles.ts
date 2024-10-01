@@ -7,9 +7,13 @@ export const Container = styled.div<IPropsTheme>`
     align-items: center;
     gap: 13rem;
 
+    overflow: hidden;
+
     > div:nth-child(2) {
         width: 75%;
         height: 80vh;
+
+        animation: invisibleToVisible 2s ease-in-out 0.1s backwards;
 
         display: flex;
         flex-direction: row;
@@ -57,6 +61,18 @@ export const Container = styled.div<IPropsTheme>`
                     }
                 }
             }
+        }
+    }
+
+    @keyframes invisibleToVisible {
+        from {
+            opacity: 0;
+            transform: translateY(500px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 `
