@@ -10,8 +10,8 @@ import { TbTargetArrow } from "react-icons/tb";
 import { MdOutlineHighQuality, MdFactory, MdComputer } from "react-icons/md";
 import { FaArrowTrendUp} from "react-icons/fa6";
 import { IoIosInfinite, IoIosHourglass } from "react-icons/io";
-import { Button_link } from "../../components/Button-link";
 import { Footer } from "../../components/Footer";
+import { WorkTogether } from "../../components/WorkTogether";
 
 export function Home() {
 
@@ -133,23 +133,7 @@ export function Home() {
                 </div>
             </div>
 
-            <div id="work-together">
-                <div>
-                    <strong>Vamos trabalhar juntos?</strong>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus labore quaerat cumque ratione reiciendis pariatur voluptate veniam. Corporis pariatur, reprehenderit, hic, earum molestias corrupti quam ipsum saepe odit necessitatibus porro.
-                    </p>
-                </div>
-
-                <div>
-                    <Button_link
-                     text="Comece agora"
-                     to="/contacts"
-                     timeDealyAnimation="0s"
-                    />
-                </div>
-
-            </div>
+            <WorkTogether />
 
             <Footer />
         </Container>

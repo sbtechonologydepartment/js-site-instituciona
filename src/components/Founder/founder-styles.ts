@@ -15,8 +15,10 @@ export const Container = styled.div<IProps>`
 
     width: 100%;
 
+    opacity: 0;
+
     --side: ${(props) => props.$leftOrRight === 'left' ? '-100px' : '100px'};
-    ${(props) => props.$alreadySeen === 'true' ? 'animation: emergeFromSide 3s ease-in-out both;' : ''}
+    ${(props) => props.$alreadySeen === 'true' ? 'animation: emergeFromSide 2s ease-in-out both;' : ''}
 
     > div.about-founder {
         ${(props) => props.$leftOrRight === 'left' ? 'order: 2;' : 'order: 1;'}

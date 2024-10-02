@@ -5,12 +5,13 @@ import joaosPhoto from '../../assets/fotos/joao-paulo.jpg'
 import { Founder } from "../../components/Founder";
 
 export function AboutUs() {
+
     return(
         <Container>
             <Header />
             
             <strong>Quem somos</strong>
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
             <div id="div-start">
                 <div id="company-numbers">
                     <div className="numbers">
@@ -66,6 +67,15 @@ export function AboutUs() {
                      textAbout="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed ipsum cum totam aliquam veritatis accusamus repudiandae id corporis, voluptas et natus tempore delectus commodi, nulla fuga dicta hic voluptate tempora."
                      leftOrRight="right"
                     />
+                </div>
+
+                <div id="our-history">
+                    <strong>Nossa história</strong>
+
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quisquam nobis voluptate distinctio dignissimos harum quo tempora, voluptates quam rem officia quis quidem perferendis eveniet provident sint placeat, totam explicabo.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est quisquam nobis voluptate distinctio dignissimos harum quo tempora, voluptates quam rem officia quis quidem perferendis eveniet provident sint placeat, totam explicabo.
+                    </p>
                 </div>
             </div>
 

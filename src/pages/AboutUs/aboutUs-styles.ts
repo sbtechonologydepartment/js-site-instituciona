@@ -17,7 +17,7 @@ export const Container = styled.div<IPropsTheme>`
         background-color: ${(props) => props.theme.COLORS.STRONG_GRAY};
 
         width: 100%;
-        height: fit-content;
+        
 
         padding: 10rem ;
 
@@ -112,6 +112,31 @@ export const Container = styled.div<IPropsTheme>`
                 font-size: 2.4rem;
                 color: ${(props) => props.theme.COLORS.LIGHT_BLUE};
                 text-align: center;
+                letter-spacing: 3px;
+            }
+        }
+
+        > div#our-history {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+
+            margin-top: 5rem;
+
+            > strong {
+                font-size: 2.4rem;
+                color: ${(props) => props.theme.COLORS.LIGHT_BLUE};
+                text-align: center;
+                letter-spacing: 5px;
+            }
+
+            > p {
+                font-size: 1.8rem;
+                color: ${(props) => props.theme.COLORS.DARK_BLUE};
+                text-align: center;
+
+                width: 100rem;
             }
         }
     }
