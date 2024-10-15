@@ -22,7 +22,7 @@ export function Contacts() {
             return toast.error('Preencha todos os campos!', {duration: 5000})
         }
 
-        const whatsappText = `Nome: ${name}\nEmail: ${email}\nEmpresa: ${enterprise}\nMensagem: ${menssage}
+        const whatsappText = `Nome: ${name}\n\nEmail: ${email}\n\nEmpresa: ${enterprise}\n\nMensagem: ${menssage}
         `
 
         window.open(`https://wa.me/5571996399919?text=${encodeURIComponent(whatsappText)}`, '_blank')

@@ -1,5 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { roll } from "../../styles/animations/roll";
+import { emerge } from "../../styles/animations/emerge";
 
 interface IProps extends IPropsTheme {
     $carouselRunnerInView?: string
@@ -24,8 +26,8 @@ export const Container = styled.div<IProps>`
 
         ${({$carouselRunnerInView}) => {
             if($carouselRunnerInView === 'true') {
-                return `
-                animation: emerge 700ms ease-in-out 1005ms backwards;
+                return css`
+                animation: ${emerge} 700ms ease-in-out 1005ms backwards;
                 `
             }
         }}
@@ -33,9 +35,9 @@ export const Container = styled.div<IProps>`
 
     ${({$carouselRunnerInView}) => {
         if($carouselRunnerInView === 'true') {
-            return `
+            return css`
             width: .1%;
-            animation: roll 1s ease-in-out forwards;
+            animation: ${roll} 1s ease-in-out forwards;
             `
         }
     }
@@ -104,28 +106,6 @@ export const Container = styled.div<IProps>`
             transform: rotateZ(180deg);
         }
 
-    }
-
-    @keyframes roll {
-        from {
-            width: 0%;
-        }
-
-        to {
-            width: 100%;
-        }
-    }
-
-    @keyframes emerge {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to { 
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     @keyframes scroll {

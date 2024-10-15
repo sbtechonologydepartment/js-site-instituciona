@@ -21,7 +21,7 @@ export function Header() {
                     <Link to={'/contacts'}>Orçamento</Link>
                 </div>
                 <div className="link-nav">
-                    <Link to={'/partners'}>Parceiros</Link>
+                    <Link to={'/machines'}>Máquinas</Link>
                 </div>
             </div>
 
