@@ -22,7 +22,7 @@ export const Container = styled.div<IPropsTheme>`
 
     border: 1px solid rgba(10,27,35,0.09);
 
-    animation: ${roll} 1.2s ease-in-out 100ms both;
+    animation: ${roll} 1.2s ease-in-out 500ms both;
 
     .partner {
         position: relative;
@@ -36,7 +36,7 @@ export const Container = styled.div<IPropsTheme>`
 
         cursor: pointer;
 
-        animation: ${emerge} 1s ease-in-out 1.2s both;
+        animation: ${emerge} 1s ease-in-out 1.6s both;
 
         transition: all 500ms ease-in-out;
 

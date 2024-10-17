@@ -54,11 +54,18 @@ export const Container = styled.div<IPropsTheme>`
         > button {
             border-radius: 100%;
             border: 1px solid rgba(10,27,35,0.09);
+            outline: .5px solid transparent;
 
             background-color: ${({theme}) => theme.COLORS.STRONG_GRAY};
 
             height: .9rem;
             width: .9rem;
+
+            transition: all 400ms ease-in-out;
+
+            &:hover {
+                outline: .5px solid ${({theme}) => theme.COLORS.ORANGE_MAIN};
+            }
 
             &.active {
                 background-color: ${({theme}) => theme.COLORS.ORANGE_MAIN};

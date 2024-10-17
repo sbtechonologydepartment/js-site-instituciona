@@ -3,7 +3,7 @@ import { keyframes } from "styled-components";
 export const emerge = keyframes`
     from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
         }
 
     to { 
