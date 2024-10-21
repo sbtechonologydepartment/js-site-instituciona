@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 export function NavMachine() {
     const partners = [
         {
-            name: 'juice',
+            name: 'zummo',
             logo: zummo
         }, 
         {

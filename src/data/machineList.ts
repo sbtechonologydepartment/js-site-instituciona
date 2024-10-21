@@ -14,7 +14,7 @@ export interface IMachine {
 }
 
 export const machineList: IMachineList = {
-    juice: [
+    zummo: [
         {
             machineBrand: 'zummo',
             name: 'Z01-Nature',
