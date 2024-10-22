@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
 import { roll } from "../../styles/animations/roll";
 import { emerge } from "../../styles/animations/emerge";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 interface IProps extends IPropsTheme {
     $carouselRunnerInView?: string
@@ -23,6 +24,10 @@ export const Container = styled.div<IProps>`
         font-size: 2rem;
         text-align: center;
         color: ${(props) => props.theme.COLORS.GRAY};
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            font-size: 1.8rem;
+        }
 
         ${({$carouselRunnerInView}) => {
             if($carouselRunnerInView === 'true') {

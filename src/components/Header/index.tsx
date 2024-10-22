@@ -34,7 +34,7 @@ export function Header() {
                      href="https://www.instagram.com/jsrepresentaca0?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                      target="_blank"
                     >
-                        <FaInstagram size={20}/>
+                        <FaInstagram />
                     </a>
                 </div>
                 <div className="social-nav-link">
@@ -42,7 +42,7 @@ export function Header() {
                      href="#"
                      target="_blank"
                     >
-                        <FaLinkedin size={20}/>
+                        <FaLinkedin />
                     </a>
                 </div>
                 <div className="social-nav-link">
@@ -50,7 +50,7 @@ export function Header() {
                      href="#"
                      target="_blank"
                     >
-                        <FaWhatsapp size={20}/>
+                        <FaWhatsapp />
                     </a>
                 </div>
                 <div className="social-nav-link">
@@ -58,7 +58,7 @@ export function Header() {
                      href="#"
                      target="_blank"
                     >
-                        <FaFacebook size={20}/>
+                        <FaFacebook />
                     </a>
                 </div>
                 <div className="social-nav-link">
@@ -66,7 +66,7 @@ export function Header() {
                      href="#"
                      target="_blank"
                     >
-                        <FaYoutube size={20}/>
+                        <FaYoutube />
                     </a>
                 </div>
             </div>

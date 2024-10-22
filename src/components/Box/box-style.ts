@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div<IPropsTheme>`
     height: 45rem;
@@ -22,6 +23,10 @@ export const Container = styled.div<IPropsTheme>`
 
     transition: all 500ms ease-in-out;
     transition-delay: 450ms;
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        height: 40rem;
+    }
 
     &::before {
         content: '';

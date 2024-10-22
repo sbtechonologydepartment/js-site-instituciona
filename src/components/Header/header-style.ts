@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 export const Container = styled.div<IPropsTheme>`
     width: 100%;
@@ -19,10 +20,20 @@ export const Container = styled.div<IPropsTheme>`
 
     background-color: ${(props) => props.theme.COLORS.STRONG_GRAY};
 
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        
+        display: none;
+    }
+
     > div#logo {
         height: 7rem;
         width: 7rem;
         margin-bottom: -5px;
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            height: 4rem;
+            width: 4rem;
+        }
 
         img {
             height: 100%;
@@ -36,6 +47,10 @@ export const Container = styled.div<IPropsTheme>`
         flex-direction: row;
         gap: 4rem;
         align-items: center;
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            gap: 2.5rem;
+        }
 
         div.link-nav {
             a {
@@ -77,10 +92,19 @@ export const Container = styled.div<IPropsTheme>`
         align-items: center;
         gap: 1rem;
 
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            gap: .7rem;
+        }
+
         div.social-nav-link {
             a {
                 color: ${(props) => props.theme.COLORS.DARK_BLUE};
                 transition: all 250ms ease-in-out;
+                font-size: 2rem;
+
+                @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                    font-size: 1.5rem;
+                }
             }
 
             a:hover {

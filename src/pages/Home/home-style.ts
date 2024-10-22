@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
+import { deckOfCards, deckOfCardsMobile } from "../../styles/animations/deckOfCards";
 
 interface IProps extends IPropsTheme {
     divalreadyvisible?: 'true' | 'false'
@@ -10,34 +12,43 @@ export const Container = styled.div<IProps>`
     flex-direction: column;
     gap: 13rem;
 
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+        gap: 10rem;
+    }
+
     div#box-row {
-        width: 80%;
+        width: 85%;
 
         margin-bottom: 10rem;
 
-        align-self: center;
         display: flex;
+        align-self: center;
         flex-direction: row;
         justify-content: space-around;
 
+        @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            margin-block: 5rem;
+        }
+
         > div {
-            animation: deckOfCards 850ms ease-in-out backwards;
+            animation: ${deckOfCards} 850ms ease-in-out backwards;
 
             animation-delay: var(--animation-cards-delay);
             --animation-cards-delay: 0s;
             --animation-cards-distance: -30rem;
+
+            @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                animation: ${deckOfCardsMobile} 850ms ease-in-out backwards;
+                animation-delay: var(--animation-cards-delay);
+            }
         }
     }
 
     > div:nth-child(4) {
-
-        div.textRow {
-            display: flex;
-            flex-direction: row;
-            gap: 2.5rem;
-            align-items: center;
-            justify-content: start;
-        }
 
         height: fit-content;
         width: 100%;
@@ -48,6 +59,24 @@ export const Container = styled.div<IProps>`
         gap: 10.5rem;
         align-items: center;
         justify-content: start;
+
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+            padding: 3rem 8% 0rem ;
+        }
+        
+
+        div.textRow {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+            align-items: center;
+            justify-content: start;
+
+            @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+                flex-direction: column;
+            }
+        }
     }
 
     > div#solutions {
@@ -70,16 +99,28 @@ export const Container = styled.div<IProps>`
 
             width: 68%;
 
+            @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                width: 85%;
+            }
+
             strong {
                 font-size: 4rem;
                 color: ${(props) => props.theme.COLORS.GRAY};
                 text-align: center;
+
+                @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                    font-size: 3rem;
+                }
             }
 
             p {
                 font-size: 1.8rem;
                 color: ${(props) => props.theme.COLORS.STRONG_GRAY};
                 text-align: center;
+
+                @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                    font-size: 1.6rem;
+                }
             }
         }
 
@@ -88,22 +129,20 @@ export const Container = styled.div<IProps>`
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             column-gap: 10rem;
-        }
-    }
 
-    @keyframes deckOfCards {
-        0% {
-            opacity: 0;
-            transform: translateX(var(--animation-cards-distance));
-        }
+            @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
 
-        25% {
-            opacity: 1;
+            @media (min-width: ${DEVICE_BREAKPOINTS.MD}) and (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                column-gap: 10rem;
+            }
         }
-
-        100%{
-            transform: translateX(0);
-        }
-
     }
 `

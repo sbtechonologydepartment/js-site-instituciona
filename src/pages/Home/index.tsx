@@ -95,40 +95,60 @@ export function Home() {
                      icon= {< MdOutlineHighQuality />}
                      title="Mais qualidade"
                      text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet itaque excepturi distinctio quasi commodi, ea ipsa assumenda"
+                     style= {{
+                        '--solution-box-delay': '500ms',
+                        '--solution-box-delay-mobile': '0s'
+                     } as React.CSSProperties}
                     />
 
                     <SolutionBox 
                      icon= {<FaArrowTrendUp />}
                      title="Rentabilidade"
                      text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet itaque excepturi distinctio quasi commodi, ea ipsa assumenda"
-                     style= {{'--solution-box-delay': '500ms'} as React.CSSProperties}
+                     style= {{
+                        '--solution-box-delay': '500ms',
+                        '--solution-box-delay-mobile': '500ms'
+                     } as React.CSSProperties}
                     />
 
                     <SolutionBox 
                      icon= {<MdFactory />}
                      title="Maior produtividade"
                      text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet itaque excepturi distinctio quasi commodi, ea ipsa assumenda"
-                     style= {{'--solution-box-delay': '1s'} as React.CSSProperties}
+                     style= {{
+                        '--solution-box-delay': '1s',
+                        '--solution-box-delay-mobile': '500ms'
+                     } as React.CSSProperties}
                     />
 
                     <SolutionBox 
                      icon= {<MdComputer/>}
                      title="Inovação"
                      text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet itaque excepturi distinctio quasi commodi, ea ipsa assumenda"
+                     style= {{
+                        '--solution-box-delay': '1s',
+                        '--solution-box-delay-mobile': '0s'
+                     } as React.CSSProperties}
                     />
 
                     <SolutionBox 
                      icon= {<IoIosInfinite />}
                      title="Automatização"
                      text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet itaque excepturi distinctio quasi commodi, ea ipsa assumenda"
-                     style= {{'--solution-box-delay': '500ms'} as React.CSSProperties}
+                     style= {{
+                        '--solution-box-delay': '500ms',
+                        '--solution-box-delay-mobile': '0s'
+                     } as React.CSSProperties}
                      />
 
                     <SolutionBox 
                      icon= {<IoIosHourglass />}
                      title="Menos tempo"
                      text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet itaque excepturi distinctio quasi commodi, ea ipsa assumenda"
-                     style= {{'--solution-box-delay': '1s'} as React.CSSProperties}
+                     style= {{
+                        '--solution-box-delay': '1s',
+                        '--solution-box-delay-mobile': '500ms'
+                     } as React.CSSProperties}
                     />
                 </div>
             </div>

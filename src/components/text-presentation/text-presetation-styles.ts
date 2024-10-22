@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { IPropsTheme } from "../../styles/theme";
+import { DEVICE_BREAKPOINTS } from "../../styles/deviceBreakpoints";
 
 interface IProps extends IPropsTheme {
     $textPresentationInView?: string
@@ -12,6 +13,11 @@ export const Container = styled.div<IProps>`
 
     overflow: hidden;
     width: 50%;
+
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+        width: 100%;
+    }
 
     :first-child{
         position: relative;
@@ -56,12 +62,21 @@ export const Container = styled.div<IProps>`
     p {
         font-size: 1.8rem;
         color: ${(props) => props.theme.COLORS.DARK_BLUE};
+
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+            font-size: 1.6rem;
+        }
     }
 
     strong {
         font-size: 4rem;
         text-align: justify;
         color: ${(props) => props.theme.COLORS.DARK_BLUE};
+
+        @media (max-width: ${DEVICE_BREAKPOINTS.MDD}) {
+            font-size: 3.5rem;
+        }
 
         span {
             color: ${(props) => props.theme.COLORS.ORANGE_MAIN};
